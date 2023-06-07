@@ -1,11 +1,12 @@
 import javax.swing.text.Position;
 
-public class Tile {
-    private char _tile;
-    private Position _position;
+public abstract class Tile {
+    protected char _tile;
+    protected Position _position;
 
     Tile(char tile, Position position){
         _tile = tile;
         _position = position;
     }
+    public String toString(){return String.valueOf(_tile);}
 }

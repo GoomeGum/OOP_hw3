@@ -1,4 +1,4 @@
-public class modifiers {
+public class Modifiers {
     //Player modifiers
 
 
