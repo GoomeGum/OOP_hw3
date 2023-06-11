@@ -1,7 +1,6 @@
 package Tile.Unit.Players.Warrior;
 
 import Tile.Unit.Health;
-import Tile.Unit.Players.Modifiers;
 import Tile.Unit.Players.Player;
 
 public class AvengerShiled{
@@ -29,7 +28,7 @@ public class AvengerShiled{
 
     public void abilityCast(Health health, int defense, Player player) {
         _remainingCoolDown = _abilityCoolDown;
-        health.set_healthAmount(Math.min(health.getHealthAmount() + defense * Modifiers.WorriorAbilityHealthModifier, health.get_healthPool()));
+        health.set_healthAmount(Math.min(health.getHealthAmount() + defense * Warrior.WarriorAbilityHealthModifier, health.get_healthPool()));
         if (player == null)
             return;
         player.defend();
