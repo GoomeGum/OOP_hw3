@@ -2,7 +2,6 @@ package Tile.Unit.Players.Warrior;
 
 import Tile.Unit.Health;
 import Tile.Unit.Players.Interfaces.IAbility;
-import Tile.Unit.Players.Modifiers;
 import Tile.Unit.Players.Player;
 
 public class AvengerShiled implements IAbility {
