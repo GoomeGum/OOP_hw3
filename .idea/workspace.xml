@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Interfaces/IAbility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="stuff">
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Hunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Shoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Empty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EnemyDeathCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/EnemyDeathCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Health.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modifiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Modifiers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TileChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Interfaces/IAbility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +23,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -66,6 +64,14 @@
       <option name="presentableId" value="Default" />
       <updated>1685641918144</updated>
     </task>
+    <task id="LOCAL-00001" summary="stuff">
+      <created>1686496063691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686496063691</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
 </project>
