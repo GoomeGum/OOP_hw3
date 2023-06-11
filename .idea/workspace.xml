@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/AvengerShiled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blizzard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Warrior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Interfaces/IAbility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modifiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modifiers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Empty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnemyDeathCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/EnemyDeathCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Health.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modifiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Modifiers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TileChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -36,13 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

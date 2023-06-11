@@ -1,4 +1,8 @@
-public class Blizzard {
+package Tile.Unit.Players.Mage;
+
+import Tile.Unit.Players.Interfaces.IAbility;
+
+public class Blizzard implements IAbility {
     private int _manaPool;
     private int _currentMana;
     private int _spellPower;
@@ -12,5 +16,10 @@ public class Blizzard {
         this._spellPower = _spellPower;
         this._hitsCounts = _hitsCounts;
         this.abilityRange = abilityRange;
+    }
+
+    @Override
+    public void gameTick() {
+
     }
 }

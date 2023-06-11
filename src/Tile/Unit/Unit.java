@@ -1,6 +1,12 @@
+package Tile.Unit;
+
+import Tile.Unit.Enemies.Enemy;
+import Tile.Tile;
+import Tile.Unit.Players.Player;
+import Tile.Empty;
 import javax.swing.text.Position;
 
-public abstract class Unit extends Tile{
+public abstract class Unit extends Tile {
     protected String _name;
    protected Health health;
     protected int _attackPoints;
@@ -66,12 +72,12 @@ public abstract class Unit extends Tile{
 
     }
 
-    public void visit(Empty e){
-    }
+    public void visit(Empty e){}
 
     public abstract void visit(Player p);
     public abstract void visit(Enemy e);
 
+    public abstract void accept(Unit unit);
     // Combat against another unit.
     protected void battle(Unit u){
 
@@ -79,6 +85,6 @@ public abstract class Unit extends Tile{
 
 
     public String describe() {
-        return String.format("%s\t\tHealth: %s\t\tAttack: %d\t\tDefense: %d", getName(), health.getHealthAmount(), getAttackPoints(), getDefensePoints());
+        return String.format("%s\t\tTile.Unit.Health: %s\t\tAttack: %d\t\tDefense: %d", getName(), health.getHealthAmount(), getAttackPoints(), getDefensePoints());
     }
 }

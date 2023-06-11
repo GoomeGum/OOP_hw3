@@ -1,9 +1,17 @@
+package Tile.Unit.Players;
+
+import Tile.Unit.Enemies.Enemy;
+
 import javax.swing.text.Position;
 
+import Tile.Unit.Players.Interfaces.IAbility;
+import Tile.Unit.Unit;
 public class Player extends Unit {
 
-    private int exp;
-    private int playerLevel;
+    protected int exp;
+    protected int playerLevel;
+
+    protected IAbility ability;
 
     public Player(char tile, Position position, String name, int healthPool, int healthAmount, int attackPoints, int defensePoints) {
         super(tile, position, name, healthPool, healthAmount, attackPoints, defensePoints);
@@ -21,11 +29,16 @@ public class Player extends Unit {
 
     @Override
     public void visit(Player p) {
-
+        System.out.println("sdfsdf");
     }
 
     @Override
     public void visit(Enemy e) {
+
+    }
+
+    @Override
+    public void accept(Unit unit) {
 
     }
 

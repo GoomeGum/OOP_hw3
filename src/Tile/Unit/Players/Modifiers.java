@@ -1,5 +1,7 @@
+package Tile.Unit.Players;
+
 public class Modifiers {
-    //Player modifiers
+    //Tile.Unit.Players.Player modifiers
 
 
     public static  final int PlayerLevelModifier = 50;
