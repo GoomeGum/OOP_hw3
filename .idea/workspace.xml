@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="stuff">
-      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Hunter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Shoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Mage.java" afterDir="false" />
+
+    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Boss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Monster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Trap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/HeroicUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Rogue/FanOfKnives.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Rogue/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Interfaces/IAbility.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Modifiers.java" beforeDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" afterDir="false" />
@@ -50,9 +56,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -63,6 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685641918144</updated>
+      <workItem from="1686496141520" duration="6611000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1686496063691</created>
@@ -73,6 +86,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

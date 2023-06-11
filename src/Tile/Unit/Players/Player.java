@@ -6,7 +6,10 @@ import javax.swing.text.Position;
 
 import Tile.Unit.Unit;
 public class Player extends Unit {
-
+    public static  final int PlayerLevelModifier = 50;
+    public static final int PlayerHealthModifier = 10;
+    public static final int PlayerAttackModifier = 4;
+    public static final int PlayerDefenceModifier = 1;
     protected int exp;
     protected int playerLevel;
 
@@ -44,7 +47,7 @@ public class Player extends Unit {
     }
 
     private void DecreaseModifier() {
-        this.exp -= Modifiers.PlayerLevelModifier * getPlayerLevel();
+        this.exp -= PlayerLevelModifier * getPlayerLevel();
     }
 
     public void setPlayerLevel(int playerLevel) {
@@ -60,19 +63,19 @@ public class Player extends Unit {
     }
 
     private void healthLevelUp() {
-        this.health.healthLevelUp(Modifiers.PlayerHealthModifier,getPlayerLevel());
+        this.health.healthLevelUp(PlayerHealthModifier,getPlayerLevel());
     }
 
     private void attackLevelUp() {
-        setAttackPoints(getAttackPoints() + (Modifiers.PlayerAttackModifier * getPlayerLevel()));
+        setAttackPoints(getAttackPoints() + (PlayerAttackModifier * getPlayerLevel()));
     }
     private void defenceLevelUp() {
-        setDefensePoints(getDefensePoints() + (Modifiers.PlayerDefenceModifier * getPlayerLevel()));
+        setDefensePoints(getDefensePoints() + (PlayerDefenceModifier * getPlayerLevel()));
 
     }
 
     public void LevelUp() {
-        while (getExp() > getPlayerLevel() * Modifiers.PlayerLevelModifier) {
+        while (getExp() > getPlayerLevel() * PlayerLevelModifier) {
             DecreaseModifier();
             increasePlayerLevel();
             healthLevelUp();
