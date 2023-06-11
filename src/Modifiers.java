@@ -6,4 +6,5 @@ public class Modifiers {
     public static final int PlayerHealthModifier = 10;
     public static final int PlayerAttackModifier = 4;
     public static final int PlayerDefenceModifier = 1;
+    public static final int WorriorAbilityHealthModifier = 10;
 }
