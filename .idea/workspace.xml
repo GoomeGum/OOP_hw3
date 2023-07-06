@@ -5,9 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/levels_dir/level1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels_dir/level2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels_dir/level3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels_dir/level4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Playable/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Playable/TileFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Playable/data/Enemys" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Playable/data/Players" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/IMessageCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Empty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/TileChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/TileChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/EnemyDeathCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/EnemyDeathCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Health.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/HeroicUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/HeroicUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Hunter/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Rogue/FanOfKnives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,16 +67,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/Desktop/cs/semester B/oop/hw3",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Playable.Unit" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\cs\semester B\oop\hw3" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
