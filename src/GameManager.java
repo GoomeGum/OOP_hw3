@@ -1,4 +1,5 @@
 import Playable.*;
+import Playable.Unit.Enemies.Enemy;
 import Playable.Unit.Players.Player;
 import Playable.Unit.Unit;
 
@@ -37,34 +38,32 @@ public class GameManager {
     private boolean play() {
         while (this.board.enemies.size() > 0 && !this.board.player.isDead()) {
             char choice = getMovement();
-            if(!move(choice)){
-                massageCallBack.send("cannot preforme this move");
+            move(choice);
+            for (Enemy e: this.board.enemies) {
+                //activate tick
             }
-            else
-            {
-                //need to activate tick for all the enemys;
-            }
+            //activate player tick
 
         }
         return this.board.enemies.size() == 0;
     }
 
-    private boolean move(char choice) {
+    private void move(char choice) {
         switch (choice) {
             case 'a':
-                if (board.checkMove(-1, 0))
-                    return true;
+                board.checkMove(-1, 0);
             case 'd':
-                if (board.checkMove(1, 0))
-                    return true;
+                board.checkMove(1, 0);
             case 's':
-                if (board.checkMove(0, -1))
-                    return true;
+                board.checkMove(0, -1);
             case 'w':
-                if (board.checkMove(1, 0))
-                    return true;
+                board.checkMove(1, 0);
+            case 'e':
+                //activate special power
+            case 'q':
+                //do nothing
+
         }
-        return false;
     }
 
     private char getMovement() {
@@ -73,16 +72,18 @@ public class GameManager {
         while (!validOption) {
             System.out.print("Enter an option (a, d, s, w): ");
             Scanner scanner = new Scanner(System.in);
-            ;
+
             String input = scanner.nextLine();
 
             if (input.length() == 1) {
                 option = input.charAt(0);
+                option = Character.toLowerCase(option);
                 switch (option) {
-                    case 'a', 'd', 's', 'w' -> {
+                    case 'a', 'd', 's', 'w', 'e', 'q' -> {
                         validOption = true;
                     }
-                    default -> System.out.println("Invalid option. Please try again.");
+                    //need to activate special power
+                    default -> massageCallBack.send("Invalid option. Please try again.");
                 }
             }
         }

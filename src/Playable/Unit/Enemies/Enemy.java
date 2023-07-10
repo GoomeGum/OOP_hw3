@@ -29,16 +29,17 @@ public class Enemy extends Unit {
 
     @Override
     public void visit(Player p) {
-
+        p.defend(this);
     }
 
     @Override
     public void visit(Enemy e) {
-
+        //I think they don't need to fight
     }
-
+    // not sure its needed
     @Override
     public void accept(Unit unit) {
 
     }
+
 }

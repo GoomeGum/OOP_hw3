@@ -24,7 +24,7 @@ public abstract class Unit extends Tile {
 
     }
     public void dealDamage(int damage){
-        health.
+        health.dealDamage(damage);
     }
     public boolean isDead(){
         return health.isDead();

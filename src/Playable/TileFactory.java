@@ -72,6 +72,7 @@ public class TileFactory {
     public Player producePlayer(int idx,Position position ){
 		Player player =  playersList.get(idx).get();
         player.setPosition(position);
+        return player;
     }
 
     public Empty produceEmpty(Position position){
