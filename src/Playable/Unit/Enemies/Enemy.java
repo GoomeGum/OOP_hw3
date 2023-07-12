@@ -1,15 +1,19 @@
 package Playable.Unit.Enemies;
 
+import Playable.Position;
 import Playable.Unit.Players.Player;
 import Playable.Unit.Unit;
 
 
 public class Enemy extends Unit {
     protected int experienceReward;
+    protected int visionRange;
 
-    public Enemy(char tile, String name, int healthPool, int attackPoints, int defensePoints,int experienceReward) {
+
+    public Enemy(char tile, String name, int healthPool, int attackPoints, int defensePoints,int experienceReward, int visionRange) {
         super(tile, name, healthPool, attackPoints, defensePoints);
         this.experienceReward = experienceReward ;
+        this.visionRange= visionRange;
 
     }
 
@@ -17,6 +21,13 @@ public class Enemy extends Unit {
         return experienceReward;
     }
 
+    public int getVisionRange() {
+        return visionRange;
+    }
+    public char play(Player player)
+    {
+        return 'q';
+    }
     @Override
     public void processStep() {
 
@@ -29,17 +40,18 @@ public class Enemy extends Unit {
 
     @Override
     public void visit(Player p) {
+        this.attack(p);
         p.defend(this);
     }
 
     @Override
     public void visit(Enemy e) {
-        //I think they don't need to fight
     }
     // not sure its needed
     @Override
     public void accept(Unit unit) {
-
+        unit.visit(this);
     }
+
 
 }

@@ -42,7 +42,7 @@ public abstract class Unit extends Tile {
     }
 
     //actions
-    protected void attack(Enemy e){
+    /**protected void attack(Enemy e){
         messageCallback.send(getName()+" starts combat with "+e.getName());
         int damage = Math.max(_attackPoints - e._defensePoints,0);
         e.dealDamage(damage);
@@ -51,7 +51,18 @@ public abstract class Unit extends Tile {
 
     public int defend(Enemy e){
         return 0;
+    }**/
+    protected void attack(Unit u){
+        messageCallback.send(getName()+" starts combat with "+u.getName());
+        int damage = Math.max(_attackPoints - u._defensePoints,0);
+        u.dealDamage(damage);
+        messageCallback.send(damage + " damage has been done");
     }
+
+    public int defend(Unit u){
+        return 0;
+    }
+
 
 
 

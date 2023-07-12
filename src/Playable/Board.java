@@ -1,9 +1,10 @@
 package Playable;
-
+import java.util.Random;
 import Playable.Unit.Enemies.Enemy;
 import java.util.ArrayList;
 import java.util.List;
 import Playable.Unit.Players.Player;
+import Playable.Unit.Unit;
 
 
 public class Board {
@@ -31,7 +32,7 @@ public class Board {
     }
 
 
-    public boolean checkMove(int Xchange, int Ychange) {
+   /** public boolean checkMove(int Xchange, int Ychange) {
         Position position = player.getPosition();
         position.UpdateX(Xchange);
         position.UpdateY(Ychange);
@@ -51,8 +52,36 @@ public class Board {
         }
         //else it's a wall and we do nothing
         return true;
-    }
+    }**/
+   public boolean checkMovePlayer(int Xchange, int Ychange) {
+       return checkMove(player,Xchange,Ychange);
+   }
 
+    public boolean checkMove(Unit unit, int Xchange, int Ychange) {
+        Position position = unit.getPosition();
+        position.UpdateX(Xchange);
+        position.UpdateY(Ychange);
+        int yVal = position.get_y();
+        int xVal = position.get_x();
+        if (xVal > board.length || yVal > board[0].length || yVal < 0 || xVal < 0)
+            return false;
+        for (Enemy enemy : enemies) {
+            if (enemy._position.equals(position)) {
+                unit.accept(enemy);
+            }
+        }
+        for (Empty empty : empties) {
+            if (empty._position.equals(position)) {
+                unit.accept(empty);
+            }
+        }
+        if (player._position.equals(position))
+        {
+            unit.accept(player);
+        }
+        //else it's a wall and we do nothing
+        return true;
+    }
     public Board() {
     }
 

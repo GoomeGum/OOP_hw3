@@ -42,7 +42,7 @@ public class Player extends Unit {
 
     @Override
     public void accept(Unit unit) {
-
+        unit.visit(this);
     }
     public int getExp() {
         return exp;

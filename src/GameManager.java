@@ -37,9 +37,10 @@ public class GameManager {
     private boolean play() {
         while (this.board.enemies.size() > 0 && !this.board.player.isDead()) {
             char choice = getMovement();
-            move(choice);
+            move(board.player,choice);
             for (Enemy e: this.board.enemies) {
-                //activate tick
+                char enemyMove = e.play(board.player);
+                move(e, enemyMove);
             }
             //activate player tick
 
@@ -47,16 +48,16 @@ public class GameManager {
         return this.board.enemies.size() == 0;
     }
 
-    private void move(char choice) {
+    private void move(Unit unit,char choice) {
         switch (choice) {
             case 'a':
-                board.checkMove(-1, 0);
+                board.checkMove(unit,-1, 0);
             case 'd':
-                board.checkMove(1, 0);
+                board.checkMove(unit,1, 0);
             case 's':
-                board.checkMove(0, -1);
+                board.checkMove(unit,0, -1);
             case 'w':
-                board.checkMove(1, 0);
+                board.checkMove(unit,1, 0);
             case 'e':
                 //activate special power
             case 'q':
