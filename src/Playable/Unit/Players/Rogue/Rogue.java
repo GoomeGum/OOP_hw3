@@ -11,7 +11,7 @@ public class Rogue extends Player {
     public static final int RogueMaxAnergyModifier = 100;
 
 
-    public Rogue(char tile,  String name, int healthPool, int healthAmount, int attackPoints, int defensePoints, int cost) {
+    public Rogue(char tile,  String name, int healthPool, int attackPoints, int defensePoints, int cost) {
         super(tile, name, healthPool,  attackPoints, defensePoints);
         ability = new FanOfKnives(RogueMaxAnergyModifier, cost);
     }

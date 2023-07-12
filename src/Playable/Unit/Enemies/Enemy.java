@@ -5,16 +5,16 @@ import Playable.Unit.Unit;
 
 
 public class Enemy extends Unit {
-    protected int experienceValue;
+    protected int experienceReward;
 
-    public Enemy(char tile, String name, int healthPool, int attackPoints, int defensePoints) {
+    public Enemy(char tile, String name, int healthPool, int attackPoints, int defensePoints,int experienceReward) {
         super(tile, name, healthPool, attackPoints, defensePoints);
-        this.experienceValue = 0;
+        this.experienceReward = experienceReward ;
 
     }
 
     public int getExperienceValue() {
-        return experienceValue;
+        return experienceReward;
     }
 
     @Override

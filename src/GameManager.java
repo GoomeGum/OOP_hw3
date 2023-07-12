@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 
 public class GameManager {
-
     public Board board;
     public IMessageCallback massageCallBack;
     public List<File> levels;
@@ -70,7 +69,7 @@ public class GameManager {
         char option = 0;
         boolean validOption = false;
         while (!validOption) {
-            System.out.print("Enter an option (a, d, s, w): ");
+            System.out.print("Enter an option (a, d, s, w,q ,e): ");
             Scanner scanner = new Scanner(System.in);
 
             String input = scanner.nextLine();
