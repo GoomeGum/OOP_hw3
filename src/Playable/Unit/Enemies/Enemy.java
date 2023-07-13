@@ -1,6 +1,5 @@
 package Playable.Unit.Enemies;
 
-import Playable.Position;
 import Playable.Unit.Players.Player;
 import Playable.Unit.Unit;
 
@@ -24,7 +23,7 @@ public class Enemy extends Unit {
     public int getVisionRange() {
         return visionRange;
     }
-    public char play(Player player)
+    public char enemyMove(Player player)
     {
         return 'q';
     }

@@ -63,19 +63,10 @@ public abstract class Unit extends Tile {
         return 0;
     }
 
-
-
-
-    // Should be automatically called once the unit finishes its turn
     public abstract void processStep();
 
     // What happens when the unit dies
     public abstract void onDeath();
-
-    // This unit attempts to interact with another tile.
-    public void interact(Tile tile){
-
-    }
 
     public abstract void accept(Unit unit);
     // Combat against another unit.

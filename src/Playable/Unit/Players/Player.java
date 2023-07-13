@@ -9,6 +9,7 @@ public class Player extends Unit {
     public static final int PlayerHealthModifier = 10;
     public static final int PlayerAttackModifier = 4;
     public static final int PlayerDefenceModifier = 1;
+    public static int playerRange;
     protected int exp;
     protected int playerLevel;
 
@@ -34,7 +35,6 @@ public class Player extends Unit {
             this.onKill(e);
         }
     }
-
     protected void onKill(Enemy e) {
         this.addExp(e.getExperienceValue());
         this.LevelUp();
@@ -80,7 +80,7 @@ public class Player extends Unit {
         setDefensePoints(getDefensePoints() + (PlayerDefenceModifier * getPlayerLevel()));
 
     }
-
+    public void abilityCast(){}
     protected void LevelUp() {
         while (getExp() > getPlayerLevel() * PlayerLevelModifier) {
             DecreaseModifier();

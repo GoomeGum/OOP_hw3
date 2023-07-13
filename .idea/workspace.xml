@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="forget to add wall">
+    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="added play for enemy, need to fixe combat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -40,24 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Desktop/cs/semester B/oop/hw3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/cs/semester B/oop/hw3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Playable.Unit" />
@@ -74,7 +86,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685641918144</updated>
-      <workItem from="1689165221223" duration="7442000" />
+      <workItem from="1689165221223" duration="10239000" />
+      <workItem from="1689254780978" duration="1761000" />
     </task>
     <task id="LOCAL-00001" summary="alot of stuff">
       <created>1688684627812</created>
@@ -90,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689020882520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎-00003" summary="added play for enemy, need to fixe combat">
+      <created>1689186877593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1689186877593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="alot of stuff" />
     <MESSAGE value="forget to add wall" />
-    <option name="LAST_COMMIT_MESSAGE" value="forget to add wall" />
+    <MESSAGE value="added play for enemy, need to fixe combat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added play for enemy, need to fixe combat" />
   </component>
 </project>

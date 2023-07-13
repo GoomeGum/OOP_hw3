@@ -39,9 +39,10 @@ public class GameManager {
             char choice = getMovement();
             move(board.player,choice);
             for (Enemy e: this.board.enemies) {
-                char enemyMove = e.play(board.player);
+                char enemyMove = e.enemyMove(board.player);
                 move(e, enemyMove);
             }
+            board.player.processStep();
             //activate player tick
 
         }
@@ -62,7 +63,6 @@ public class GameManager {
                 //activate special power
             case 'q':
                 //do nothing
-
         }
     }
 
@@ -79,8 +79,12 @@ public class GameManager {
                 option = input.charAt(0);
                 option = Character.toLowerCase(option);
                 switch (option) {
-                    case 'a', 'd', 's', 'w', 'e', 'q' -> {
+                    case 'a', 'd', 's', 'w', 'q'-> {
                         validOption = true;
+                    }
+                    case 'e' ->
+                    {
+                        board.player.abilityCast();
                     }
                     //need to activate special power
                     default -> massageCallBack.send("Invalid option. Please try again.");

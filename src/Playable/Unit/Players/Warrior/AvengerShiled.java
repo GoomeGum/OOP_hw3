@@ -20,17 +20,16 @@ public class AvengerShiled{
         return _heal;
     }
 
-    public void gameTick() {
+    public void processStep() {
         if (_remainingCoolDown > 0)
             _remainingCoolDown--;
     }
 
 
-    public void abilityCast(Health health, int defense, Player player) {
+    public void abilityCast(Health health, int defense) {
         _remainingCoolDown = _abilityCoolDown;
         health.set_healthAmount(Math.min(health.getHealthAmount() + defense * Warrior.WarriorAbilityHealthModifier, health.get_healthPool()));
-        if (player == null)
-            return;
+
 
     }
 }

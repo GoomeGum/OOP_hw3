@@ -12,6 +12,7 @@ public class Warrior extends Player {
     public static final int WarriorAttackModifier = 2;
     public static final int WarriorDefenseModifier = 1;
 
+
     AvengerShiled avengerShiled;
   
     public Warrior(char tile, String name, int healthPool, int attackPoints, int defensePoints, int abilityCoolDown) {
@@ -21,4 +22,12 @@ public class Warrior extends Player {
     public void accept(Unit unit){
         unit.visit(this);
     }
+    @Override
+    public void processStep() {
+        avengerShiled.processStep();
+    }
+    public void abilityCast(){
+        avengerShiled.abilityCast(this.health,WarriorDefenseModifier);
+    }
+
 }

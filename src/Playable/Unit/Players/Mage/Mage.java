@@ -20,5 +20,11 @@ public class Mage extends Player {
         super.LevelUp();
         blizzard.levelUp(super.getPlayerLevel());
     }
-
+    @Override
+    public void processStep() {
+        blizzard.processStep(this.playerLevel);
+    }
+    public void abilityCast(){
+        blizzard.abilityCast(this._manaCost);
+    }
 }

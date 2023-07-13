@@ -27,4 +27,14 @@ public class Shoot {
     public void shootArrow() {
         _arrowsCount--;
     }
+    public void processStep(int level)
+    {
+        if(_ticksCount==10)
+        {
+            _arrowsCount = _arrowsCount+level;
+            _ticksCount = 0;
+        }
+        else
+            _ticksCount ++;
+    }
 }

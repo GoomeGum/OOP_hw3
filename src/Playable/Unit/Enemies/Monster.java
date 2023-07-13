@@ -10,7 +10,7 @@ public class Monster extends Enemy{
         super(tile, name, healthPool, healthAmount, attackPoints, defensePoints, visionRange);
     }
     @Override
-    public char play(Player player)
+    public char enemyMove(Player player)
     {
         Position enemyP = this.getPosition();
         Position playerP = player.getPosition();

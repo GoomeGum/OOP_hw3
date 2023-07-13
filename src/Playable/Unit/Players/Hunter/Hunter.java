@@ -27,5 +27,8 @@ public class Hunter extends Player {
     public void AbilityCast(Enemy enemy){
         shoot.shootArrow();
     }
-
+    @Override
+    public void processStep() {
+        shoot.processStep(this.playerLevel);
+    }
 }

@@ -19,8 +19,8 @@ public class Blizzard {
     }
 
 
-    public void gameTick() {
-
+    public void processStep(int level) {
+        _currentMana = Math.min(_manaPool, (_currentMana+1)*level);
     }
 
 
@@ -40,5 +40,13 @@ public class Blizzard {
 
     public void set_spellPower(int spellPower) {
         this._spellPower = spellPower;
+    }
+    public void abilityCast(int manaCost){
+        _currentMana = _currentMana -manaCost;
+        int hits = 0;
+        while (hits < _hitsCounts)
+        {
+            hits++;
+        }
     }
 }

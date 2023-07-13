@@ -19,7 +19,7 @@ public class Trap extends Enemy {
         this.visible = true;
     }
     @Override
-    public char play(Player player)
+    public char enemyMove(Player player)
     {
         Position playerP = player.getPosition();
         visible = ticksCount < visibilityTime;

@@ -14,7 +14,7 @@ public class FanOfKnives {
         this.currentEnergy += FanOfKnivesCurrentEnergyModifier;
     }
 
-    public void gameTick(){
+    public void processStep(){
         currentEnergy = Math.min(currentEnergy+ 10, 100);
     }
 

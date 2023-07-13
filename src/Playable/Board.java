@@ -53,9 +53,6 @@ public class Board {
         //else it's a wall and we do nothing
         return true;
     }**/
-   public boolean checkMovePlayer(int Xchange, int Ychange) {
-       return checkMove(player,Xchange,Ychange);
-   }
 
     public boolean checkMove(Unit unit, int Xchange, int Ychange) {
         Position position = unit.getPosition();

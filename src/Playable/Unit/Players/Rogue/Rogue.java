@@ -26,4 +26,8 @@ public class Rogue extends Player {
         ability.abilityCast();
 
     }
+    @Override
+    public void processStep() {
+        ability.processStep();
+    }
 }
