@@ -23,7 +23,16 @@ public abstract class Unit extends Tile {
     protected void initialize(Position position, IMessageCallback messageCallback){
 
     }
+    public int attackRoll()
+    {
+        return (int)(Math.random()*this._attackPoints);
+    }
+    public int defenseRoll()
+    {
+        return (int)(Math.random()*this._defensePoints);
+    }
     public void dealDamage(int damage){
+
         health.dealDamage(damage);
     }
     public boolean isDead(){
@@ -41,26 +50,18 @@ public abstract class Unit extends Tile {
         TakePlace(e);
     }
 
-    //actions
-    /**protected void attack(Enemy e){
-        messageCallback.send(getName()+" starts combat with "+e.getName());
-        int damage = Math.max(_attackPoints - e._defensePoints,0);
-        e.dealDamage(damage);
-        messageCallback.send(damage + " damage has been done");
-    }
-
-    public int defend(Enemy e){
-        return 0;
-    }**/
-    protected void attack(Unit u){
+    protected void combat(Unit u){
         messageCallback.send(getName()+" starts combat with "+u.getName());
-        int damage = Math.max(_attackPoints - u._defensePoints,0);
-        u.dealDamage(damage);
-        messageCallback.send(damage + " damage has been done");
-    }
-
-    public int defend(Unit u){
-        return 0;
+        int attackRoll =this.attackRoll();
+        int defenseRoll = u.defenseRoll();
+        int damage = attackRoll - defenseRoll;
+        if(damage > 0) {
+            u.dealDamage(damage);
+            messageCallback.send(damage + " damage has been done");
+            if(u.isDead())
+                messageCallback.send(u._name + " id dead");
+        }
+        messageCallback.send("the combat is over");
     }
 
     public abstract void processStep();

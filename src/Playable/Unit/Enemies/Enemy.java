@@ -36,11 +36,9 @@ public class Enemy extends Unit {
     public void onDeath() {
 
     }
-
     @Override
     public void visit(Player p) {
-        this.attack(p);
-        p.defend(this);
+        this.combat(p);
     }
 
     @Override

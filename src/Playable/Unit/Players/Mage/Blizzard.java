@@ -1,6 +1,12 @@
 package Playable.Unit.Players.Mage;
 
 
+import Playable.Unit.Enemies.Enemy;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Blizzard {
     private int _manaPool;
     private int _currentMana;
@@ -18,6 +24,9 @@ public class Blizzard {
         this.abilityRange = abilityRange;
     }
 
+    public int get_currentMana() {
+        return _currentMana;
+    }
 
     public void processStep(int level) {
         _currentMana = Math.min(_manaPool, (_currentMana+1)*level);
@@ -41,12 +50,29 @@ public class Blizzard {
     public void set_spellPower(int spellPower) {
         this._spellPower = spellPower;
     }
-    public void abilityCast(int manaCost){
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange, int manaCost){
         _currentMana = _currentMana -manaCost;
+        List<Enemy> killed = new LinkedList<>();
         int hits = 0;
-        while (hits < _hitsCounts)
+        while (hits < _hitsCounts && enemiesInRange.size()>0)
         {
+            int randomEnemy = (int)(Math.random() * enemiesInRange.size());
+            for (Enemy enemy: enemiesInRange) {
+                if (randomEnemy==0) {
+                    int damage = this._spellPower - enemy.defenseRoll();
+                    if (damage > 0) {
+                        enemy.dealDamage(damage);
+                        if (enemy.isDead()) {
+                            enemiesInRange.remove(enemy);
+                            killed.add(enemy);
+                        }
+                    }
+                    break;
+                }
+                randomEnemy--;
+            }
             hits++;
         }
+        return killed;
     }
 }

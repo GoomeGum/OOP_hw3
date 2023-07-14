@@ -43,8 +43,6 @@ public class GameManager {
                 move(e, enemyMove);
             }
             board.player.processStep();
-            //activate player tick
-
         }
         return this.board.enemies.size() == 0;
     }
@@ -59,10 +57,7 @@ public class GameManager {
                 board.checkMove(unit,0, -1);
             case 'w':
                 board.checkMove(unit,1, 0);
-            case 'e':
-                //activate special power
-            case 'q':
-                //do nothing
+            default:;
         }
     }
 
@@ -72,9 +67,7 @@ public class GameManager {
         while (!validOption) {
             System.out.print("Enter an option (a, d, s, w,q ,e): ");
             Scanner scanner = new Scanner(System.in);
-
             String input = scanner.nextLine();
-
             if (input.length() == 1) {
                 option = input.charAt(0);
                 option = Character.toLowerCase(option);
@@ -84,7 +77,7 @@ public class GameManager {
                     }
                     case 'e' ->
                     {
-                        board.player.abilityCast();
+                        board.player.abilityCast(board.getEnemiesInRange());
                     }
                     //need to activate special power
                     default -> massageCallBack.send("Invalid option. Please try again.");
