@@ -3,6 +3,8 @@ import Playable.Unit.Enemies.Enemy;
 import Playable.Position;
 import Playable.Unit.Unit;
 
+import java.util.List;
+
 
 public class Player extends Unit {
     public static  final int PlayerLevelModifier = 50;
@@ -15,12 +17,18 @@ public class Player extends Unit {
 
 
 
-    public Player(char tile,String name, int healthPool, int attackPoints, int defensePoints) {
+    public Player(char tile,String name, int healthPool, int attackPoints, int defensePoints, int abilityRange) {
         super(tile, name, healthPool, attackPoints, defensePoints);
+        this.playerRange= abilityRange;
     }
     @Override
     public void processStep() {
     }
+
+    public static int getPlayerRange() {
+        return playerRange;
+    }
+
     @Override
     public void onDeath() {
         messageCallback.send("you died!");
@@ -29,7 +37,7 @@ public class Player extends Unit {
     public void visit(Player p) {}
     @Override
     public void visit(Enemy e) {
-        this.attack(e);
+        this.combat(e);
         if(e.isDead()){
             this.TakePlace(e);
             this.onKill(e);
@@ -80,7 +88,7 @@ public class Player extends Unit {
         setDefensePoints(getDefensePoints() + (PlayerDefenceModifier * getPlayerLevel()));
 
     }
-    public void abilityCast(){}
+    public void abilityCast(List<Enemy> enemiesInRange){}
     protected void LevelUp() {
         while (getExp() > getPlayerLevel() * PlayerLevelModifier) {
             DecreaseModifier();

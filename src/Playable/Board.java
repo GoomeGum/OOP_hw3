@@ -1,4 +1,5 @@
 package Playable;
+import java.util.LinkedList;
 import java.util.Random;
 import Playable.Unit.Enemies.Enemy;
 import java.util.ArrayList;
@@ -79,6 +80,16 @@ public class Board {
         //else it's a wall and we do nothing
         return true;
     }
+
+    public List<Enemy> getEnemiesInRange() {
+        List<Enemy> enemiesInRange = new LinkedList<>();
+        for (Enemy enemy:enemies) {
+            if (player._position.Distance(enemy._position) < player.getPlayerRange())
+                enemiesInRange.add(enemy);
+        }
+        return enemiesInRange;
+    }
+
     public Board() {
     }
 

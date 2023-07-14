@@ -1,5 +1,9 @@
 package Playable.Unit.Players.Hunter;
 
+import Playable.Unit.Enemies.Enemy;
+
+import java.util.List;
+
 public class Shoot {
     public int _range;
     public int _arrowsCount;
@@ -24,8 +28,20 @@ public class Shoot {
         set_arrowsCount(get_arrowsCount() + arrowsCountModifier * playerLevel);
     }
 
-    public void shootArrow() {
+    public Enemy abilityCast(Enemy enemy, int attackPoints) {
         _arrowsCount--;
+        if (enemy != null)
+        {
+            int damage = attackPoints - enemy.defenseRoll();
+            if (damage > 0) {
+                enemy.dealDamage(damage);
+                if (enemy.isDead()) {
+                    return enemy;
+                }
+            }
+        }
+        return null;
+
     }
     public void processStep(int level)
     {
