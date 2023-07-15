@@ -7,15 +7,15 @@ import java.util.List;
 
 public class Mage extends Player {
 
-    private final int manaModifier = 25;
     private int _manaCost;
-    private int _hitCount;
     private int _abilityRange;
     private Blizzard blizzard;
     public Mage(char tile, String name, int healthPool, int attackPoints, int defensePoints, int manaPool,int manaCost,int spellPower,int hitCount,int abilityRange) {
         super(tile, name, healthPool, attackPoints, defensePoints,abilityRange);
         //TODO: check from where we get mana cost hit spell power
-        blizzard = new Blizzard(manaPool,spellPower,hitCount,abilityRange);
+        blizzard = new Blizzard(manaPool,spellPower,hitCount);
+        this._manaCost = manaCost;
+        this._abilityRange = abilityRange;
     }
 
     @Override
@@ -38,4 +38,9 @@ public class Mage extends Player {
             }
         }
     }
+    @Override
+    protected String abilityDescribe(){
+        return String.format("Mana: %d/%d\t\tSpell Power: %d", blizzard.get_currentMana(), blizzard.get_manaPool(), blizzard.get_spellPower());
+    }
+
 }

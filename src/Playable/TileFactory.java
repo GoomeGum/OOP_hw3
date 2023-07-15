@@ -66,7 +66,10 @@ public class TileFactory {
     // TODO: Add additional callbacks of your choice
 
     public Enemy produceEnemy(char tile, Position position) {
-        return enemiesMap.get(tile).get();
+        Character c =tile;
+        Enemy enemy = enemiesMap.get(c).get();
+        enemy.setPosition(position);
+        return enemy;
     }
 
     public Player producePlayer(int idx,Position position ){

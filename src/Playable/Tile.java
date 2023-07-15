@@ -18,7 +18,10 @@ public abstract class Tile {
     public Position getPosition() {
         return _position;
     }
-    public void setPosition(Position pos){ _position = pos;}
+    public void setPosition(Position pos){
+        _position = pos;
+
+    }
 
     public void accept(Tile tile){}
 

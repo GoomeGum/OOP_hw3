@@ -36,6 +36,7 @@ public class GameManager {
 
     private boolean play() {
         while (this.board.enemies.size() > 0 && !this.board.player.isDead()) {
+            System.out.println(this.board.toString());
             char choice = getMovement();
             move(board.player,choice);
             for (Enemy e: this.board.enemies) {
@@ -43,20 +44,23 @@ public class GameManager {
                 move(e, enemyMove);
             }
             board.player.processStep();
+            System.out.println(board.player.describe());
         }
         return this.board.enemies.size() == 0;
     }
 
     private void move(Unit unit,char choice) {
+        int x = unit.getPosition().get_x();
+        int y = unit.getPosition().get_y();
         switch (choice) {
-            case 'a':
-                board.checkMove(unit,-1, 0);
-            case 'd':
-                board.checkMove(unit,1, 0);
-            case 's':
-                board.checkMove(unit,0, -1);
             case 'w':
-                board.checkMove(unit,1, 0);
+                board.checkMove(unit,x-1, y);break;
+            case 's':
+                board.checkMove(unit,x+1, y);break;
+            case 'a':
+                board.checkMove(unit,x, y-1);break;
+            case 'd':
+                board.checkMove(unit,x, y+1);break;
             default:;
         }
     }
@@ -65,7 +69,7 @@ public class GameManager {
         char option = 0;
         boolean validOption = false;
         while (!validOption) {
-            System.out.print("Enter an option (a, d, s, w,q ,e): ");
+            System.out.print("Enter an option (a, d, s, w, q ,e): ");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.length() == 1) {
@@ -78,8 +82,8 @@ public class GameManager {
                     case 'e' ->
                     {
                         board.player.abilityCast(board.getEnemiesInRange());
+                        validOption = true;
                     }
-                    //need to activate special power
                     default -> massageCallBack.send("Invalid option. Please try again.");
                 }
             }
@@ -110,13 +114,16 @@ public class GameManager {
         int i = 1;
         int choice;
         do {
+            System.out.println("Select player:");
             for (Player player : players) {
                 System.out.println(i + ". " + player.describe());
+                i++;
             }
-            System.out.println("choose your fighter");
             choice = scanner.nextInt();
-        } while (choice > players.size() || choice < 1);
-        board.player = players.get(choice);
+        }
+        while (choice > players.size() || choice < 1);
+        board.player = players.get(choice-1);
+        System.out.println("You have selected: "+board.player.getName() );
     }
 
     private void buildBoard(int level) {
@@ -136,12 +143,20 @@ public class GameManager {
                 Xplace = 0;
                 for (char tile : line.toCharArray()) {
                     Position position = new Position(Xplace, Yplace);
-                    if (tile == '#')
-                        board.walls.add(tileFactory.produceWall(position));
-                    else if (tile == '.')
-                        board.empties.add(tileFactory.produceEmpty(position));
-                    else {
-                        board.enemies.add(tileFactory.produceEnemy(tile, position));
+                    switch (tile){
+                        case '@':
+                            board.player.setPosition(position);
+                        case '#':
+                            board.walls.add(tileFactory.produceWall(position));
+                            break;
+                        case '.':
+                            board.empties.add(tileFactory.produceEmpty(position));
+                            break;
+                        case 's','k','q','z','b','g','w','M','C','K','B','Q','D':
+                            {
+                                board.enemies.add(tileFactory.produceEnemy(tile, position));
+                            }
+                        default:
                     }
                     Xplace++;
                 }

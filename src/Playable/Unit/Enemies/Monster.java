@@ -3,6 +3,7 @@ package Playable.Unit.Enemies;
 import Playable.Position;
 import Playable.Unit.Players.Player;
 
+import java.util.List;
 import java.util.Random;
 
 public class Monster extends Enemy{
@@ -20,13 +21,13 @@ public class Monster extends Enemy{
             int dy = enemyP.get_y() - playerP.get_y();
             if (Math.abs(dx) > Math.abs(dy))
                 if (dx > 0)
-                    move = 'a';
+                    move = 'w';
                 else
-                    move = 'd';
+                    move = 's';
             else if (dx > 0)
-                move = 'w';
+                move = 'a';
             else
-                move = 's';
+                move = 'd';
         }
         else
         {

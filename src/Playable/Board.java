@@ -30,54 +30,55 @@ public class Board {
         for (Wall wall : walls) {
             board[wall._position.get_x()][wall._position.get_y()] = wall._tile;
         }
+        board[player._position.get_x()][player._position.get_y()] = player._tile;
     }
 
-
-   /** public boolean checkMove(int Xchange, int Ychange) {
-        Position position = player.getPosition();
-        position.UpdateX(Xchange);
-        position.UpdateY(Ychange);
-        int yVal = position.get_y();
-        int xVal = position.get_x();
-        if (xVal > board.length || yVal > board[0].length || yVal < 0 || xVal < 0)
-            return false;
-        for (Enemy enemy : enemies) {
-            if (enemy._position.equals(position)) {
-                player.accept(enemy);
-            }
-        }
-        for (Empty empty : empties) {
-            if (empty._position.equals(position)) {
-                player.accept(empty);
-            }
-        }
-        //else it's a wall and we do nothing
-        return true;
-    }**/
-
     public boolean checkMove(Unit unit, int Xchange, int Ychange) {
-        Position position = unit.getPosition();
-        position.UpdateX(Xchange);
-        position.UpdateY(Ychange);
-        int yVal = position.get_y();
-        int xVal = position.get_x();
-        if (xVal > board.length || yVal > board[0].length || yVal < 0 || xVal < 0)
+        Position oldPosition = unit.getPosition();
+        Position newPosition = new Position(Xchange,Ychange);
+        if (Xchange > board.length || Ychange > board[0].length || Ychange < 0 || Xchange < 0)
             return false;
-        for (Enemy enemy : enemies) {
-            if (enemy._position.equals(position)) {
-                unit.accept(enemy);
+        char TileInPlace = board[Xchange][Ychange];
+        switch (TileInPlace){
+            case '#':
+                break;
+            case '@': {
+                unit.visit(player);
+                if(player.isDead())
+                {
+                    board[Xchange][Ychange] = unit._tile;
+                    board[oldPosition.get_x()][oldPosition.get_y()] = 'X';
+                    System.out.println("Game Over");
+
+                }
+                break;
+            }
+            case '.': {
+                for (Empty empty : empties) {
+                    if (empty._position.equals(newPosition)) {
+                        unit.visit(empty);
+                        board[Xchange][Ychange] = unit._tile;
+                        board[oldPosition.get_x()][oldPosition.get_y()] = '.';
+                        break;
+                    }
+                }
+            }
+            default:
+            {
+                for (Enemy enemy : enemies) {
+                    if (enemy._position.equals(newPosition)) {
+                        unit.visit(enemy);
+                        if(enemy.isDead())
+                        {
+                            board[Xchange][Ychange] = unit._tile;
+                            empties.add(new Empty('.',oldPosition));
+                            board[oldPosition.get_x()][oldPosition.get_y()] = '.';
+                        }
+                        break;
+                    }
+                }
             }
         }
-        for (Empty empty : empties) {
-            if (empty._position.equals(position)) {
-                unit.accept(empty);
-            }
-        }
-        if (player._position.equals(position))
-        {
-            unit.accept(player);
-        }
-        //else it's a wall and we do nothing
         return true;
     }
 

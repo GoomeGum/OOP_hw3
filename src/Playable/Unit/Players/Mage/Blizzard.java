@@ -12,20 +12,30 @@ public class Blizzard {
     private int _currentMana;
     private int _spellPower;
     private int _hitsCounts;
-    private int abilityRange;
 
     private final int manaModifier = 25;
     private final int spellPowerModifier = 10;
-    public Blizzard(int _manaPool, int _spellPower, int _hitsCounts, int abilityRange) {
+    public Blizzard(int _manaPool, int _spellPower, int _hitsCounts) {
         this._manaPool = _manaPool;
         this._currentMana = _manaPool / 4;
         this._spellPower = _spellPower;
         this._hitsCounts = _hitsCounts;
-        this.abilityRange = abilityRange;
     }
 
     public int get_currentMana() {
         return _currentMana;
+    }
+
+    public int get_spellPower() {
+        return _spellPower;
+    }
+
+    public int get_manaPool() {
+        return _manaPool;
+    }
+
+    public int get_hitsCounts() {
+        return _hitsCounts;
     }
 
     public void processStep(int level) {

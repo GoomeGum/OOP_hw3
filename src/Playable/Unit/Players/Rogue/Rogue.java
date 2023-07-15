@@ -10,14 +10,14 @@ import java.util.List;
 public class Rogue extends Player {
     public FanOfKnives ability;
     public static final int RogueAttackModifier = 3;
-    public static final int RogueMaxAnergyModifier = 100;
+    public static final int RogueMaxEnergyModifier = 100;
     public static final int RogueRangeModifier = 3;
 
 
 
     public Rogue(char tile,  String name, int healthPool, int attackPoints, int defensePoints, int cost) {
         super(tile, name, healthPool,  attackPoints, defensePoints,RogueRangeModifier);
-        ability = new FanOfKnives(RogueMaxAnergyModifier, cost);
+        ability = new FanOfKnives(RogueMaxEnergyModifier, cost);
     }
     public void LevelUp(){
         ability.LevelUp();
@@ -40,5 +40,9 @@ public class Rogue extends Player {
     @Override
     public void processStep() {
         ability.processStep();
+    }
+    @Override
+    protected String abilityDescribe(){
+        return String.format("Energy: %d/%d", ability.getCurrentEnergy(),RogueMaxEnergyModifier);
     }
 }

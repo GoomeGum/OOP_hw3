@@ -20,6 +20,7 @@ public class Player extends Unit {
     public Player(char tile,String name, int healthPool, int attackPoints, int defensePoints, int abilityRange) {
         super(tile, name, healthPool, attackPoints, defensePoints);
         this.playerRange= abilityRange;
+        this.playerLevel = 1;
     }
     @Override
     public void processStep() {
@@ -97,5 +98,11 @@ public class Player extends Unit {
             attackLevelUp();
         }
     }
-
+    @Override
+    public String describe() {
+        String player= String.format("%s\t\tHealth: %s\t\tAttack: %d\t\tDefense: %d\t\tLevel: %d\t\tExperience: %d/50\t\t", getName(), health.getHealthAmount(), getAttackPoints(), getDefensePoints(), getPlayerLevel(),getExp());
+        String ability = this.abilityDescribe();
+        return player+" "+ability;
+    }
+    protected String abilityDescribe(){return " ";}
 }

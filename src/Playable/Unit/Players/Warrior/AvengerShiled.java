@@ -24,6 +24,10 @@ public class AvengerShiled{
         return _abilityCoolDown;
     }
 
+    public int get_remainingCoolDown() {
+        return _remainingCoolDown;
+    }
+
     public int getHeal() {
         return _heal;
     }

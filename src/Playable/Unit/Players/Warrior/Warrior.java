@@ -40,5 +40,10 @@ public class Warrior extends Player {
                 this.onKill(enemy);
         }
     }
+    @Override
+    protected String abilityDescribe(){
+        return String.format("Cooldown: %d/%d", avengerShiled.get_remainingCoolDown(),avengerShiled.get_abilityCoolDown());
+    }
+
 
 }

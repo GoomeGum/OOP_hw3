@@ -41,7 +41,7 @@ public abstract class Unit extends Tile {
     //visit
     protected void TakePlace(Tile tile){
         Position temp=this._position;
-        this._position = tile.getPosition();
+        this.setPosition(tile.getPosition());
         tile.setPosition(temp);
     }
     public abstract void visit(Player p);
@@ -49,6 +49,7 @@ public abstract class Unit extends Tile {
     public void visit(Empty e){
         TakePlace(e);
     }
+    public void visit(Unit unit){}
 
     protected void combat(Unit u){
         messageCallback.send(getName()+" starts combat with "+u.getName());
@@ -69,9 +70,9 @@ public abstract class Unit extends Tile {
     // What happens when the unit dies
     public abstract void onDeath();
 
-    public abstract void accept(Unit unit);
-    // Combat against another unit.
-
+    public void accept(Unit unit){
+        unit.visit(this);
+    }
 
     public int getAttackPoints() {
         return _attackPoints;
