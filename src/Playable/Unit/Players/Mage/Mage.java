@@ -29,9 +29,10 @@ public class Mage extends Player {
     }
     @Override
     public void abilityCast(List<Enemy> enemiesInRange){
-        if (blizzard.get_currentMana() < _manaCost)
+        if (blizzard.get_currentMana() < _manaCost || enemiesInRange == null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
+            messageCallback.send(getName() + " used Blizzard");
             List<Enemy> killed = blizzard.abilityCast(enemiesInRange, this._manaCost);
             for (Enemy enemy:killed ) {
                 this.onKill(enemy);

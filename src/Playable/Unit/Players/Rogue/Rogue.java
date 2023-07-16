@@ -27,9 +27,10 @@ public class Rogue extends Player {
 
     @Override
     public void abilityCast(List<Enemy> enemiesInRange){
-        if (ability.getCurrentEnergy() < ability.getCost())
+        if (ability.getCurrentEnergy() < ability.getCost() || enemiesInRange == null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
+            messageCallback.send(getName() + " used Fan Of Knives");
             List<Enemy> killed = ability.abilityCast(enemiesInRange, _attackPoints);
             for (Enemy enemy : killed) {
                 this.onKill(enemy);

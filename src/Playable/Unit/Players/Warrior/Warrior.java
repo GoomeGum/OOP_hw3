@@ -32,12 +32,14 @@ public class Warrior extends Player {
     }
     @Override
     public void abilityCast(List<Enemy> enemiesInRange){
-        if (avengerShiled.get_abilityCoolDown() > 0)
+        if (avengerShiled.get_abilityCoolDown() > 0 || enemiesInRange==null)
             this.messageCallback.send("Invalid option. you lost your turn.");
         else {
             Enemy enemy = avengerShiled.abilityCast(enemiesInRange, this.health, WarriorDefenseModifier);
             if (enemy!=null)
                 this.onKill(enemy);
+            messageCallback.send(getName() + " used Avenger's Shield");
+
         }
     }
     @Override

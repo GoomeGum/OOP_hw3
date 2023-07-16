@@ -47,6 +47,7 @@ public class Player extends Unit {
     protected void onKill(Enemy e) {
         this.addExp(e.getExperienceValue());
         this.LevelUp();
+        messageCallback.send(getName() + " killed "+ e.getName());
     }
 
     @Override
@@ -61,7 +62,9 @@ public class Player extends Unit {
         this.exp = exp;
     }
 
-    public void addExp(int exp) {this.exp+=exp;}
+    public void addExp(int exp) {this.exp+=exp;
+        messageCallback.send(getName() + " got "+ exp+" experience");
+    }
     private void DecreaseModifier() {
         this.exp -= PlayerLevelModifier * getPlayerLevel();
     }
@@ -97,6 +100,8 @@ public class Player extends Unit {
             healthLevelUp();
             attackLevelUp();
         }
+        messageCallback.send(getName() + " level up!");
+
     }
     @Override
     public String describe() {

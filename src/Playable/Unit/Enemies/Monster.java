@@ -29,27 +29,11 @@ public class Monster extends Enemy{
             else
                 move = 'd';
         }
-        else
-        {
+        else {
             Random random = new Random();
-            int toWhere = random.nextInt(0,5);
-            switch (toWhere) {
-                case 1:
-                    move = 'a';
-                    break;
-                case 2:
-                    move = 'd';
-                    break;
-                case 3:
-                    move = 'w';
-                    break;
-                case 4:
-                    move = 's';
-                    break;
-                case 0:
-                    move = 'q';
-                    break;
-            }
+            int toWhere = random.nextInt(0, 5);
+            String s = "qadws";
+            move= s.charAt(toWhere);
         }
         return move;
     }

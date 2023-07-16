@@ -30,9 +30,10 @@ public class Hunter extends Player {
 
     @Override
     public void abilityCast(List<Enemy> enemiesInRange){
-        if (shoot.get_arrowsCount() == 0)
+        if (shoot.get_arrowsCount() == 0 && enemiesInRange==null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
+            messageCallback.send(getName() + " used Shoot");
             Enemy theChosen = null;
             double rangeTheChosen = 0.;
             if(!enemiesInRange.isEmpty()) {

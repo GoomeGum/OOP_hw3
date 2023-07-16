@@ -1,6 +1,5 @@
 package Playable;
 import java.util.LinkedList;
-import java.util.Random;
 import Playable.Unit.Enemies.Enemy;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +71,7 @@ public class Board {
                         {
                             board[Xchange][Ychange] = unit._tile;
                             empties.add(new Empty('.',oldPosition));
+                            enemies.remove(enemy);
                             board[oldPosition.get_x()][oldPosition.get_y()] = '.';
                         }
                         break;
