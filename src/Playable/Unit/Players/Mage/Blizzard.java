@@ -34,10 +34,6 @@ public class Blizzard {
         return _manaPool;
     }
 
-    public int get_hitsCounts() {
-        return _hitsCounts;
-    }
-
     public void processStep(int level) {
         _currentMana = Math.min(_manaPool, (_currentMana+1)*level);
     }

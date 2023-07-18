@@ -15,6 +15,10 @@ public class FanOfKnives {
         this.currentEnergy = energy;
     }
 
+    public void setCurrentEnergy(int currentEnergy) {
+        this.currentEnergy = currentEnergy;
+    }
+
     public int getCurrentEnergy() {
         return currentEnergy;
     }
@@ -28,12 +32,14 @@ public class FanOfKnives {
     }
 
     public void processStep(){
-        currentEnergy = Math.min(currentEnergy+ 10, 100);
+        currentEnergy = Math.min(currentEnergy+ 10, FanOfKnivesCurrentEnergyModifier);
     }
 
 
     public List<Enemy> abilityCast(List<Enemy> enemiesInRange, int attackPoints)
     {
+        if (enemiesInRange.isEmpty() || currentEnergy < cost)
+            return null;
         currentEnergy -= cost;
         List<Enemy> killed = new LinkedList<>();
         int randomEnemy = (int)(Math.random() * enemiesInRange.size());

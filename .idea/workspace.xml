@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="omer please try to play">
-      <change afterPath="$PROJECT_DIR$/Test/Test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/src/TrapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="need to add test">
+      <change afterPath="$PROJECT_DIR$/Test/src/FanOfKnivesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/src/TrapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/src/TrapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Qc9HdfivJUEJlnOnJEBgB2eiWf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -158,7 +154,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1689427134440</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL‎-00007" summary="need to add test">
+      <created>1689536011232</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL‎-00007" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1689536011232</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +185,8 @@
     <MESSAGE value="added tickGame, need to fixe combat and abilityCast" />
     <MESSAGE value="need to fix monster move - it needs to find the player" />
     <MESSAGE value="omer please try to play" />
-    <option name="LAST_COMMIT_MESSAGE" value="omer please try to play" />
+    <MESSAGE value="need to add test" />
+    <option name="LAST_COMMIT_MESSAGE" value="need to add test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
