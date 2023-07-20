@@ -26,7 +26,7 @@ public class Rogue extends Player {
     }
 
     @Override
-    public void abilityCast(List<Enemy> enemiesInRange){
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange){
         if (ability.getCurrentEnergy() < ability.getCost() || enemiesInRange == null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
@@ -35,8 +35,9 @@ public class Rogue extends Player {
             for (Enemy enemy : killed) {
                 this.onKill(enemy);
             }
+            return killed;
         }
-
+    return null;
     }
     @Override
     public void processStep() {

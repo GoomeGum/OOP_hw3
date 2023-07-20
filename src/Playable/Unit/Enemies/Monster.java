@@ -19,15 +19,17 @@ public class Monster extends Enemy{
         if (playerP.Distance(enemyP)<this.getVisionRange()) {
             int dx = enemyP.get_x() - playerP.get_x();
             int dy = enemyP.get_y() - playerP.get_y();
-            if (Math.abs(dx) > Math.abs(dy))
+            if (Math.abs(dx) > Math.abs(dy)) {
                 if (dx > 0)
+                    move = 'a';
+                else
+                    move = 'd';
+            } else {
+                if (dy > 0)
                     move = 'w';
                 else
                     move = 's';
-            else if (dx > 0)
-                move = 'a';
-            else
-                move = 'd';
+            }
         }
         else {
             Random random = new Random();

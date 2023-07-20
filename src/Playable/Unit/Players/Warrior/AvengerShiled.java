@@ -42,7 +42,10 @@ public class AvengerShiled{
         int randomEnemy = (int)(Math.random() * enemiesInRange.size());
         for (Enemy enemy: enemiesInRange) {
             if (randomEnemy==0) {
-                enemy.dealDamage(health.get_healthPool()/10);
+                int damage = health.get_healthPool()/10;
+                enemy.dealDamage(damage);
+                if(damage > 0)
+                    // TODO: send message somehow
                 if(enemy.isDead())
                     return enemy;
                 break;

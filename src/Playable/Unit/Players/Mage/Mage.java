@@ -28,7 +28,7 @@ public class Mage extends Player {
         blizzard.processStep(this.playerLevel);
     }
     @Override
-    public void abilityCast(List<Enemy> enemiesInRange){
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange){
         if (blizzard.get_currentMana() < _manaCost || enemiesInRange == null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
@@ -37,7 +37,9 @@ public class Mage extends Player {
             for (Enemy enemy:killed ) {
                 this.onKill(enemy);
             }
+            return killed;
         }
+        return null;
     }
     @Override
     protected String abilityDescribe(){

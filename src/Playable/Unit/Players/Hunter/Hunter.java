@@ -5,6 +5,7 @@ import Playable.Unit.Players.Player;
 
 import Playable.Position;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Hunter extends Player {
@@ -29,7 +30,8 @@ public class Hunter extends Player {
     }
 
     @Override
-    public void abilityCast(List<Enemy> enemiesInRange){
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange){
+        List<Enemy> deadEnemys = new LinkedList<>();
         if (shoot.get_arrowsCount() == 0 && enemiesInRange==null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
@@ -48,9 +50,13 @@ public class Hunter extends Player {
                     rangeTheChosen = rangeEnemy;
                 }
             }
-            if (shoot.abilityCast(theChosen, this._attackPoints) != null)
-                this.onKill(theChosen);
+            if (shoot.abilityCast(theChosen, this._attackPoints) != null) {
+                deadEnemys.add(theChosen);
+                onKill(theChosen);
+                return deadEnemys;
+            }
         }
+        return null;
     }
     @Override
     public void processStep() {

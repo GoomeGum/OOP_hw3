@@ -6,6 +6,7 @@ import Playable.Unit.Unit;
 
 import Playable.Position;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Warrior extends Player {
@@ -31,16 +32,18 @@ public class Warrior extends Player {
         avengerShiled.processStep();
     }
     @Override
-    public void abilityCast(List<Enemy> enemiesInRange){
-        if (avengerShiled.get_abilityCoolDown() > 0 || enemiesInRange==null)
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange){
+        if (avengerShiled.get_remainingCoolDown() > 0 || enemiesInRange==null)
             this.messageCallback.send("Invalid option. you lost your turn.");
         else {
             Enemy enemy = avengerShiled.abilityCast(enemiesInRange, this.health, WarriorDefenseModifier);
-            if (enemy!=null)
-                this.onKill(enemy);
             messageCallback.send(getName() + " used Avenger's Shield");
-
+            if (enemy!=null) {
+                this.onKill(enemy);
+                return new ArrayList<>() {{add(enemy);}};
+            }
         }
+        return null;
     }
     @Override
     protected String abilityDescribe(){

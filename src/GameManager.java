@@ -54,14 +54,16 @@ public class GameManager {
         int y = unit.getPosition().get_y();
         switch (choice) {
             case 'w':
-                board.checkMove(unit,x-1, y);break;
+                board.checkMove(unit,y-1, x);break;
             case 's':
-                board.checkMove(unit,x+1, y);break;
+                board.checkMove(unit,y+1, x);break;
             case 'a':
-                board.checkMove(unit,x, y-1);break;
+                board.checkMove(unit,y, x-1);break;
             case 'd':
-                board.checkMove(unit,x, y+1);break;
-            default:;
+                board.checkMove(unit,y, x+1);break;
+            case 'e':
+                 board.castAbility();
+            case 'q': //do nothing
         }
     }
 
@@ -76,14 +78,10 @@ public class GameManager {
                 option = input.charAt(0);
                 option = Character.toLowerCase(option);
                 switch (option) {
-                    case 'a', 'd', 's', 'w', 'q'-> {
+                    case 'a', 'd', 's', 'w', 'q','e' -> {
                         validOption = true;
                     }
-                    case 'e' ->
-                    {
-                        board.player.abilityCast(board.getEnemiesInRange());
-                        validOption = true;
-                    }
+
                     default -> massageCallBack.send("Invalid option. Please try again.");
                 }
             }
@@ -142,10 +140,11 @@ public class GameManager {
                 String line = scanner.nextLine();
                 Xplace = 0;
                 for (char tile : line.toCharArray()) {
-                    Position position = new Position(Xplace, Yplace);
+                    Position position = new Position(Yplace, Xplace);
                     switch (tile){
                         case '@':
                             board.player.setPosition(position);
+                            break;
                         case '#':
                             board.walls.add(tileFactory.produceWall(position));
                             break;

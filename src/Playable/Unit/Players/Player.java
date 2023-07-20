@@ -92,7 +92,11 @@ public class Player extends Unit {
         setDefensePoints(getDefensePoints() + (PlayerDefenceModifier * getPlayerLevel()));
 
     }
-    public void abilityCast(List<Enemy> enemiesInRange){}
+
+    public List<Enemy> abilityCast(List<Enemy> enemiesInRange) {
+        return null;
+    }
+
     protected void LevelUp() {
         while (getExp() > getPlayerLevel() * PlayerLevelModifier) {
             DecreaseModifier();

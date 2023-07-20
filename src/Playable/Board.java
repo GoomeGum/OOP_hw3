@@ -19,25 +19,25 @@ public class Board {
     public char[][] board;
 
     public void buildStringBoard(int xplace, int yplace) {
-        board = new char[xplace][yplace];
+        board = new char[yplace][xplace];
         for (Empty empty : empties) {
-            board[empty._position.get_x()][empty._position.get_y()] = empty._tile;
+            board[empty._position.get_y()][empty._position.get_x()] = empty._tile;
         }
         for (Enemy enemy : enemies) {
-            board[enemy._position.get_x()][enemy._position.get_y()] = enemy._tile;
+            board[enemy._position.get_y()][enemy._position.get_x()] = enemy._tile;
         }
         for (Wall wall : walls) {
-            board[wall._position.get_x()][wall._position.get_y()] = wall._tile;
+            board[wall._position.get_y()][wall._position.get_x()] = wall._tile;
         }
-        board[player._position.get_x()][player._position.get_y()] = player._tile;
+        board[player._position.get_y()][player._position.get_x()] = player._tile;
     }
 
-    public boolean checkMove(Unit unit, int Xchange, int Ychange) {
+    public boolean checkMove(Unit unit, int YChange, int XChange) {
         Position oldPosition = unit.getPosition();
-        Position newPosition = new Position(Xchange,Ychange);
-        if (Xchange > board.length || Ychange > board[0].length || Ychange < 0 || Xchange < 0)
+        Position newPosition = new Position(YChange,XChange);
+        if (YChange > board.length || XChange > board[0].length || XChange < 0 || YChange < 0)
             return false;
-        char TileInPlace = board[Xchange][Ychange];
+        char TileInPlace = board[YChange][XChange];
         switch (TileInPlace){
             case '#':
                 break;
@@ -45,8 +45,8 @@ public class Board {
                 unit.visit(player);
                 if(player.isDead())
                 {
-                    board[Xchange][Ychange] = unit._tile;
-                    board[oldPosition.get_x()][oldPosition.get_y()] = 'X';
+                    board[YChange][XChange] = unit._tile;
+                    board[oldPosition.get_y()][oldPosition.get_x()] = 'X';
                     System.out.println("Game Over");
 
                 }
@@ -56,8 +56,8 @@ public class Board {
                 for (Empty empty : empties) {
                     if (empty._position.equals(newPosition)) {
                         unit.visit(empty);
-                        board[Xchange][Ychange] = unit._tile;
-                        board[oldPosition.get_x()][oldPosition.get_y()] = '.';
+                        board[YChange][XChange] = unit._tile;
+                        board[oldPosition.get_y()][oldPosition.get_x()] = '.';
                         break;
                     }
                 }
@@ -69,10 +69,10 @@ public class Board {
                         unit.visit(enemy);
                         if(enemy.isDead())
                         {
-                            board[Xchange][Ychange] = unit._tile;
+                            board[YChange][XChange] = unit._tile;
                             empties.add(new Empty('.',oldPosition));
                             enemies.remove(enemy);
-                            board[oldPosition.get_x()][oldPosition.get_y()] = '.';
+                            board[oldPosition.get_y()][oldPosition.get_x()] = '.';
                         }
                         break;
                     }
@@ -106,5 +106,17 @@ public class Board {
             sb.append("\n");
         }
         return sb.toString();
+    }
+
+    public void castAbility() {
+        List<Enemy> deadEnemies = player.abilityCast(this.getEnemiesInRange());
+        if(deadEnemies == null)
+            return;
+        for (Enemy enemy: deadEnemies) {
+            Position position = enemy.getPosition();
+            empties.add(new Empty('.',position));
+            enemies.remove(enemy);
+            board[position.get_y()][position.get_x()] = '.';
+        }
     }
 }
