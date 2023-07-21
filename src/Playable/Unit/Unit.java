@@ -69,7 +69,7 @@ public abstract class Unit extends Tile {
         }
         else
             messageCallback.send("No damage was done");
-        messageCallback.send(u.getName()+ " engaged in combat with "+getName());
+        messageCallback.send(u.getName()+ " finished combat with "+getName());
     }
 
     public abstract void processStep();

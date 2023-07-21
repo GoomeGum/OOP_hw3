@@ -1,4 +1,5 @@
 package Playable.Unit.Players.Mage;
+import Playable.IMessageCallback;
 import Playable.Unit.Enemies.Enemy;
 import Playable.Unit.Players.Player;
 
@@ -12,8 +13,8 @@ public class Mage extends Player {
     private Blizzard blizzard;
     public Mage(char tile, String name, int healthPool, int attackPoints, int defensePoints, int manaPool,int manaCost,int spellPower,int hitCount,int abilityRange) {
         super(tile, name, healthPool, attackPoints, defensePoints,abilityRange);
-        //TODO: check from where we get mana cost hit spell power
-        blizzard = new Blizzard(manaPool,spellPower,hitCount);
+
+        blizzard = new Blizzard(getName(),manaPool,spellPower,hitCount,messageCallback);
         this._manaCost = manaCost;
         this._abilityRange = abilityRange;
     }

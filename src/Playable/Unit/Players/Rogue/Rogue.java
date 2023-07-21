@@ -17,12 +17,13 @@ public class Rogue extends Player {
 
     public Rogue(char tile,  String name, int healthPool, int attackPoints, int defensePoints, int cost) {
         super(tile, name, healthPool,  attackPoints, defensePoints,RogueRangeModifier);
-        ability = new FanOfKnives(RogueMaxEnergyModifier, cost);
+        ability = new FanOfKnives(name,RogueMaxEnergyModifier, cost,messageCallback);
     }
     public void LevelUp(){
         ability.LevelUp();
         int NewAttack= getAttackPoints()+ (RogueAttackModifier * getPlayerLevel());
         setAttackPoints(NewAttack);
+        
     }
 
     @Override
@@ -31,7 +32,7 @@ public class Rogue extends Player {
             this.messageCallback.send("Invalid option. Please try again.");
         else {
             messageCallback.send(getName() + " used Fan Of Knives");
-            List<Enemy> killed = ability.abilityCast(enemiesInRange, _attackPoints);
+            List<Enemy> killed = ability.abilityCast(getName(),enemiesInRange, _attackPoints);
             for (Enemy enemy : killed) {
                 this.onKill(enemy);
             }

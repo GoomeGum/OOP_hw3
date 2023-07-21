@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="omer please try to play">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="fix board disply and more stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Blizzard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/FanOfKnives.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,30 +47,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Desktop/cs/semester B/oop/hw3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/cs/semester B/oop/hw3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Playable.Unit" />
@@ -164,7 +161,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1689427134440</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix board disply and more stuff">
+      <created>1689867597803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689867597803</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +192,8 @@
     <MESSAGE value="added tickGame, need to fixe combat and abilityCast" />
     <MESSAGE value="need to fix monster move - it needs to find the player" />
     <MESSAGE value="omer please try to play" />
-    <option name="LAST_COMMIT_MESSAGE" value="omer please try to play" />
+    <MESSAGE value="fix board disply and more stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix board disply and more stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -198,9 +203,9 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

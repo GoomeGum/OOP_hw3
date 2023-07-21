@@ -1,5 +1,6 @@
 package Playable.Unit.Players.Hunter;
 
+import Playable.IMessageCallback;
 import Playable.Unit.Enemies.Enemy;
 
 import java.util.List;
@@ -8,12 +9,15 @@ public class Shoot {
     public int _range;
     public int _arrowsCount;
     public int _ticksCount = 0;
-
+    private IMessageCallback message;
     private final int arrowsCountModifier = 10;
+    private String name;
 
-    public Shoot(int range, int arrowsCount) {
+    public Shoot(String PlayerName, int range, int arrowsCount,IMessageCallback messageCallback) {
         _range = range;
         _arrowsCount = arrowsCount;
+        message = messageCallback;
+        name = PlayerName;
     }
 
     public void set_arrowsCount(int _arrowsCount) {
@@ -34,6 +38,7 @@ public class Shoot {
         {
             int damage = attackPoints - enemy.defenseRoll();
             if (damage > 0) {
+                message.send(name+" hit "+enemy.getName()+ " for "+damage+" ability damage");
                 enemy.dealDamage(damage);
                 if (enemy.isDead()) {
                     return enemy;

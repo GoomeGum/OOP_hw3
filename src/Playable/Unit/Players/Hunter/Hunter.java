@@ -18,7 +18,7 @@ public class Hunter extends Player {
 
     public Hunter(char tile, String name, int healthPool,  int attackPoints, int defensePoints, int range) {
         super(tile, name, healthPool, attackPoints, defensePoints,RangeModifier);
-        shoot = new Shoot(range, super.getPlayerLevel() * arrowsCountModifier);
+        shoot = new Shoot(name,range, super.getPlayerLevel() * arrowsCountModifier,messageCallback);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Hunter extends Player {
 
     @Override
     public List<Enemy> abilityCast(List<Enemy> enemiesInRange){
-        List<Enemy> deadEnemys = new LinkedList<>();
+        List<Enemy> deadEnemies = new LinkedList<>();
         if (shoot.get_arrowsCount() == 0 && enemiesInRange==null)
             this.messageCallback.send("Invalid option. Please try again.");
         else {
@@ -51,9 +51,9 @@ public class Hunter extends Player {
                 }
             }
             if (shoot.abilityCast(theChosen, this._attackPoints) != null) {
-                deadEnemys.add(theChosen);
+                deadEnemies.add(theChosen);
                 onKill(theChosen);
-                return deadEnemys;
+                return deadEnemies;
             }
         }
         return null;

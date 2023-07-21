@@ -1,6 +1,7 @@
 package Playable.Unit.Players.Mage;
 
 
+import Playable.IMessageCallback;
 import Playable.Unit.Enemies.Enemy;
 
 import java.util.Iterator;
@@ -12,14 +13,17 @@ public class Blizzard {
     private int _currentMana;
     private int _spellPower;
     private int _hitsCounts;
-
+    private IMessageCallback message;
+    private String name;
     private final int manaModifier = 25;
     private final int spellPowerModifier = 10;
-    public Blizzard(int _manaPool, int _spellPower, int _hitsCounts) {
+    public Blizzard(String PlayerName, int _manaPool, int _spellPower, int _hitsCounts, IMessageCallback messageCallback) {
         this._manaPool = _manaPool;
         this._currentMana = _manaPool / 4;
         this._spellPower = _spellPower;
         this._hitsCounts = _hitsCounts;
+        message = messageCallback;
+        name = PlayerName;
     }
 
     public int get_currentMana() {
@@ -71,6 +75,7 @@ public class Blizzard {
                 if (randomEnemy==0) {
                     int damage = this._spellPower - enemy.defenseRoll();
                     if (damage > 0) {
+                        message.send(name+" hit "+enemy.getName()+ " for "+damage+" ability damage");
                         enemy.dealDamage(damage);
                         if (enemy.isDead()) {
                             enemiesInRange.remove(enemy);

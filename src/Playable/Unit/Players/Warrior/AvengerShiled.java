@@ -1,5 +1,6 @@
 package Playable.Unit.Players.Warrior;
 
+import Playable.IMessageCallback;
 import Playable.Unit.Enemies.Enemy;
 import Playable.Unit.Health;
 import Playable.Unit.Players.Player;
@@ -12,12 +13,16 @@ public class AvengerShiled{
     private int _heal;
     private int _abilityCoolDown;
     private int _remainingCoolDown;
-
-    AvengerShiled(int hitPower, int heal, int abilityCoolDown) {
+    private String name;
+    private IMessageCallback message;
+    AvengerShiled(String PlayerName,int hitPower, int heal, int abilityCoolDown,IMessageCallback messageCallback) {
         _heal = heal;
         _abilityCoolDown = abilityCoolDown;
         _hitPower = hitPower;
         _remainingCoolDown = 0;
+        message = messageCallback;
+        name = PlayerName;
+
     }
 
     public int get_abilityCoolDown() {
@@ -45,7 +50,7 @@ public class AvengerShiled{
                 int damage = health.get_healthPool()/10;
                 enemy.dealDamage(damage);
                 if(damage > 0)
-                    // TODO: send message somehow
+                    message.send(name+" hit "+enemy.getName()+ " for "+damage+" ability damage");
                 if(enemy.isDead())
                     return enemy;
                 break;
@@ -53,5 +58,9 @@ public class AvengerShiled{
             randomEnemy--;
         }
         return null;
+    }
+
+    public void resetCooldown() {
+        _remainingCoolDown = 0;
     }
 }
