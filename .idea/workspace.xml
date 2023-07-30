@@ -10,18 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="more stuff">
+      <change afterPath="$PROJECT_DIR$/Test/src/PlayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP_hw3.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/src/TrapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/src/TrapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hw3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels_dir/level1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels_dir/level2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels_dir/level3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels_dir/level4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +57,6 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
@@ -93,6 +85,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GoomeGum\IdeaProjects\OOP_hw3\src" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Playable.Unit.Players" />
@@ -211,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689959211893</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="more stuff">
+      <created>1690747730013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690747730013</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

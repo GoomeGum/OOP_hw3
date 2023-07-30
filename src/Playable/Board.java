@@ -97,6 +97,17 @@ public class Board {
 
     @Override
     public String toString() {
+        for (Empty empty : empties) {
+            board[empty._position.get_y()][empty._position.get_x()] = empty._tile;
+        }
+        for (Enemy enemy : enemies) {
+            board[enemy._position.get_y()][enemy._position.get_x()] = enemy._tile;
+        }
+        for (Wall wall : walls) {
+            board[wall._position.get_y()][wall._position.get_x()] = wall._tile;
+        }
+        board[player._position.get_y()][player._position.get_x()] = player._tile;
+
         StringBuilder sb = new StringBuilder();
 
         for (char[] row : board) {

@@ -29,6 +29,10 @@ public class Trap extends Enemy {
             ticksCount ++;
         if (this.getPosition().Distance(playerP) < 2)
             this.visit(player);
+        if(visible)
+            this._tile = 'Q';
+        else
+            this._tile = '.';
         return 'q';
     }
 }
