@@ -42,7 +42,7 @@ public class AvengerShiled{
             _remainingCoolDown--;
     }
     public Enemy abilityCast(List<Enemy> enemiesInRange,Health health, int defense) {
-        _remainingCoolDown = _abilityCoolDown;
+        _remainingCoolDown = _abilityCoolDown + 1;
         health.set_healthAmount(Math.min(health.getHealthAmount() + defense * Warrior.WarriorAbilityHealthModifier, health.get_healthPool()));
         int randomEnemy = (int)(Math.random() * enemiesInRange.size());
         for (Enemy enemy: enemiesInRange) {

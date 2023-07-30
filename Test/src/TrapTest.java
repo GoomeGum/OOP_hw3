@@ -23,4 +23,5 @@ public class TrapTest {
         double end_dist = this.t.getPosition().Distance(this.p.getPosition());
         Assert.assertTrue("The monster should get closer", end_dist < start_dist);
     }
+
 }

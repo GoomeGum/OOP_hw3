@@ -14,8 +14,9 @@ public class GameManager {
     public IMessageCallback massageCallBack;
     public List<File> levels;
     private TileFactory tileFactory;
-
-    public GameManager(IMessageCallback massage) {
+    private File directory;
+    public GameManager(IMessageCallback massage,File directory) {
+        this.directory = directory;
         massageCallBack = massage;
         this.board = new Board();
         Unit.board = board;
@@ -31,7 +32,14 @@ public class GameManager {
             buildBoard(i);
             finishedLevel = play();
         }
-
+        if(finishedLevel){
+            System.out.println("                              .__        \n" +
+                    " ___.__. ____  __ __  __  _  _|__| ____  \n" +
+                    "<   |  |/  _ \\|  |  \\ \\ \\/ \\/ /  |/    \\ \n" +
+                    " \\___  (  <_> )  |  /  \\     /|  |   |  \\\n" +
+                    " / ____|\\____/|____/    \\/\\_/ |__|___|  /\n" +
+                    " \\/                                   \\/ ");
+        }
     }
 
     private boolean play() {
@@ -90,9 +98,7 @@ public class GameManager {
     }
 
     private void createLevels() {
-        String baseDir = "levels_dir";
-        File folder = new File(baseDir);
-        File[] fileNames = folder.listFiles();
+        File[] fileNames = this.directory.listFiles();
         generateFileList(fileNames);
     }
 
