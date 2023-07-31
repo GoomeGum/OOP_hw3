@@ -2,12 +2,13 @@ package Playable.Unit.Players.Rogue;
 
 import Playable.Unit.Enemies.Enemy;
 import Playable.Unit.Health;
+import Playable.Unit.Players.HeroicUnit;
 import Playable.Unit.Players.Player;
 
 import javax.swing.text.Position;
 import java.util.List;
 
-public class Rogue extends Player {
+public class Rogue extends Player implements HeroicUnit {
     public FanOfKnives ability;
     public static final int RogueAttackModifier = 3;
     public static final int RogueMaxEnergyModifier = 100;

@@ -1,12 +1,13 @@
 package Playable.Unit.Players.Mage;
 import Playable.IMessageCallback;
 import Playable.Unit.Enemies.Enemy;
+import Playable.Unit.Players.HeroicUnit;
 import Playable.Unit.Players.Player;
 
 import javax.swing.text.Position;
 import java.util.List;
 
-public class Mage extends Player {
+public class Mage extends Player implements HeroicUnit {
 
     private int _manaCost;
     private int _abilityRange;

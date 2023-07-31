@@ -1,5 +1,9 @@
 package Playable.Unit.Players;
 
+import Playable.Unit.Enemies.Enemy;
+
+import java.util.List;
+
 public interface HeroicUnit {
-    void castAbility();
+    List<Enemy> abilityCast(List<Enemy> enemiesInRange);
 }

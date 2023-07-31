@@ -1,6 +1,7 @@
 package Playable.Unit.Players.Hunter;
 
 import Playable.Unit.Enemies.Enemy;
+import Playable.Unit.Players.HeroicUnit;
 import Playable.Unit.Players.Player;
 
 import Playable.Position;
@@ -8,7 +9,7 @@ import Playable.Position;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Hunter extends Player {
+public class Hunter extends Player implements HeroicUnit {
     private Shoot shoot;
     private final int arrowsCountModifier = 10;
     private final int attackModifier = 2;

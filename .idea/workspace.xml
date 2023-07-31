@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="OOP_hw3:jar" />
+      <artifact name="OOP_hw3-0:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,11 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="more stuff">
-      <change afterPath="$PROJECT_DIR$/Test/src/PlayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OOP_hw3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOP_hw3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OOP_hw3_jar/OOP_hw3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/EnemyDeathCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/HeroicUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/HeroicUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +67,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Desktop/cs/semester B/oop/hw3",
+    "last_opened_file_path": "C:/Users/97254/OOP_hw3-0/hw3.drawio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,7 +83,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -134,8 +145,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.main" />
-        <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="JUnit.MonsterTest" />
+        <item itemvalue="JUnit.PlayerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -250,10 +261,14 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/AvengerShiled.java</url>
-          <line>49</line>
+          <line>57</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

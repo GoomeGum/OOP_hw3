@@ -32,7 +32,7 @@ public class Player extends Unit {
 
     @Override
     public void onDeath() {
-        messageCallback.send("you died!");
+        messageCallback.send("you lost.");
     }
     @Override
     public void visit(Player p) {}
