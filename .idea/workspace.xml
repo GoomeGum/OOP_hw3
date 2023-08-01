@@ -10,21 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da80eb0c-1a98-44a2-b383-7c172ff2a2b9" name="Changes" comment="more stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOP_hw3_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OOP_hw3_jar/OOP_hw3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/EnemyDeathCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/HeroicUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/HeroicUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Hunter/Shoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Mage/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Rogue/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Players/Warrior/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playable/Unit/Enemies/Monster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +92,7 @@
       <recent name="Playable.Unit.Players" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="JUnit.MonsterTest">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="hw3" />
@@ -144,8 +132,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.MonsterTest" />
+        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.PlayerTest" />
       </list>
     </recent_temporary>
@@ -224,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690747730013</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎-00010" summary="more stuff">
+      <created>1690835260034</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL‎-00010" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1690835260034</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
