@@ -28,7 +28,7 @@ public class PlayerTest {
     @org.junit.Before
     public  void setUp() throws Exception {
         this.data = new LinkedList<>();
-        File file = new File("C:\\Users\\GoomeGum\\IdeaProjects\\OOP_hw3\\levels_dir");
+        File file = new File("levels_dir");
         this.gm = new GameManager(s-> data.add(s),file);
 
         this.p1 = new Player('p', "Mashawsha", 100, 10, 20, 4);
@@ -41,13 +41,21 @@ public class PlayerTest {
         this.em2 = new Empty('.',position2);
     }
 
-    @org.junit.Test
-    public void visit() {
-        p1.visit(p2);
-        p1.visit(e1);
-        e1.visit(e2);
+    public void PlayerVisitEMPTY() {
+    
         p2.visit(em1);
-
+        assertEquals(null,this.data);
+        
+    }
+     e1.visit(e2);
+    @org.junit.Test
+    public void PlayerVisitPlayer(){
+        p1.visit(p2);
+        assertEquals(null,this.data);
+    }
+    @org.junit.Test
+    public void P1VisitE1(){
+        p1.visit(e1);
         Assert.assertEquals("Mashawsha engaged in combat with Lannister Solider",this.data.get(0));
         String regexPlayer = "Mashawsha rolled [0-9]+ attack points";
         Pattern pattern = Pattern.compile(regexPlayer);
@@ -65,6 +73,7 @@ public class PlayerTest {
         assertTrue(matcher.matches() || "No damage was done".equals(this.data.get(3)));
 
         Assert.assertEquals("Lannister Solider finished combat with Mashawsha",this.data.get(4));
+
     }
 
     @org.junit.Test
