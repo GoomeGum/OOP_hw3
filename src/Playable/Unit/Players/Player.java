@@ -109,17 +109,13 @@ public class Player extends Unit {
     }
     @Override
     public String describe() {
-        String player= String.format("%s\t\tHealth: %s\t\tAttack: %d\t\tDefense: %d\t\tLevel: %d\t\tExperience: %d/%d\t\t", getName(), health.getHealthAmount(), getAttackPoints(), getDefensePoints(), getPlayerLevel(),getExp(),neededExp());
+        String player= String.format("%s\t\tHealth: %s\t\tAttack: %d\t\tDefense: %d\t\tLevel: %d\t\tExperience: %d/%d\t\t", getName(), this.get_currentHealth(), getAttackPoints(), getDefensePoints(), getPlayerLevel(),getExp(),neededExp());
         String ability = this.abilityDescribe();
         return player+" "+ability;
     }
 
     private int neededExp() {
         return getPlayerLevel() * PlayerLevelModifier;
-    }
-
-    public int getHealth(){
-        return this.health.getHealthAmount();
     }
     public int getAttack(){
         return this._attackPoints;

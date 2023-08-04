@@ -20,8 +20,12 @@ public abstract class Unit extends Tile {
         _defensePoints = defensePoints;
 
     }
-    protected void initialize(Position position, IMessageCallback messageCallback){
-
+    public void initialize(Position position, IMessageCallback messageCallback){
+        this.setPosition(position);
+        this.messageCallback = messageCallback;
+    }
+    public int get_currentHealth(){
+        return health.getHealthAmount();
     }
     public int attackRoll()
     {
@@ -44,7 +48,7 @@ public abstract class Unit extends Tile {
         return health.isDead();
     }
 
-    protected void TakePlace(Tile tile){
+    public void TakePlace(Tile tile){
         Position temp=this._position;
         this.setPosition(tile.getPosition());
         tile.setPosition(temp);
@@ -56,7 +60,7 @@ public abstract class Unit extends Tile {
     }
     public void visit(Unit unit){}
 
-    protected void combat(Unit u){
+    public void combat(Unit u){
         messageCallback.send(getName()+" engaged in combat with "+u.getName());
         int attackRoll =this.attackRoll();
         int defenseRoll = u.defenseRoll();

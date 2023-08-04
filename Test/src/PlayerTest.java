@@ -73,7 +73,7 @@ public class PlayerTest {
         this.p1.LevelUp();
         assertEquals("Mashawsha level up!",this.data.get(0));
 
-        assertEquals(120,p1.getHealth());
+        assertEquals(120,p1.get_currentHealth());
         assertEquals(18,p1.getAttack());
         assertEquals(20,p1.getDefensePoints());
         assertEquals(2,p1.getPlayerLevel());
