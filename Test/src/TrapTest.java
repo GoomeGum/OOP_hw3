@@ -1,5 +1,4 @@
 import Playable.Position;
-import Playable.Unit.Enemies.Monster;
 import Playable.Unit.Enemies.Trap;
 import Playable.Unit.Players.Player;
 import org.junit.*;
@@ -14,14 +13,13 @@ public class TrapTest {
         this.p = new Player('p', "Mashawsha", 100, 10, 20, 4);
     }
     @Test
-    public void testMonsterEnemyMoveClose(){
+    public void testTrapEnemyMoveClose(){
         this.p.setPosition(new Position(5,5));
         double start_dist = this.t.getPosition().Distance(this.p.getPosition());
 
         char c = this.t.enemyMove(p);
 
-        double end_dist = this.t.getPosition().Distance(this.p.getPosition());
-        Assert.assertTrue("The monster should get closer", end_dist < start_dist);
+        Assert.assertTrue("The trap should mot move",c == 'q');
     }
 
 }

@@ -1,6 +1,7 @@
 package Playable.Unit.Players.Warrior;
 
 import Playable.Unit.Enemies.Enemy;
+import Playable.Unit.Players.HeroicUnit;
 import Playable.Unit.Players.Player;
 import Playable.Unit.Unit;
 
@@ -9,7 +10,7 @@ import Playable.Position;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Warrior extends Player {
+public class Warrior extends Player implements HeroicUnit {
 
     public static final int WarriorAbilityHealthModifier = 10;
     public static final int WarriorHealthPoolModifier = 5;

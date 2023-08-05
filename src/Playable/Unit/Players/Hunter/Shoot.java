@@ -5,7 +5,7 @@ import Playable.Unit.Enemies.Enemy;
 
 import java.util.List;
 
-public class Shoot {
+public class Shoot{
     public int _range;
     public int _arrowsCount;
     public int _ticksCount = 0;

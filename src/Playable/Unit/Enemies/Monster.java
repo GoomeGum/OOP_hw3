@@ -32,12 +32,17 @@ public class Monster extends Enemy{
             }
         }
         else {
-            Random random = new Random();
-            int toWhere = random.nextInt(0, 5);
-            String s = "qadws";
-            move= s.charAt(toWhere);
+            return enemyMoveRandom();
         }
         return move;
     }
+    public char enemyMoveRandom()
+    {
+        Random random = new Random();
+        int toWhere = random.nextInt(0, 5);
+        String s = "qadws";
+        return s.charAt(toWhere);
+    }
+
 
 }

@@ -44,6 +44,7 @@ public class GameManager {
 
     private boolean play() {
         while (this.board.enemies.size() > 0 && !this.board.player.isDead()) {
+            System.out.println(board.player.describe());
             System.out.println(this.board.toString());
             char choice = getMovement();
             move(board.player,choice);
@@ -52,7 +53,6 @@ public class GameManager {
                 move(e, enemyMove);
             }
             board.player.processStep();
-            System.out.println(board.player.describe());
         }
         return this.board.enemies.size() == 0;
     }
