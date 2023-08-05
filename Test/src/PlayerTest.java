@@ -1,12 +1,10 @@
 import Playable.Empty;
 import Playable.Position;
-import Playable.Unit.Enemies.Enemy;
 import Playable.Unit.Enemies.Monster;
 import Playable.Unit.Players.Player;
 import org.junit.Assert;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -40,21 +38,19 @@ public class PlayerTest {
         this.position2 = new Position(1,2);
         this.em2 = new Empty('.',position2);
     }
-
-    public void PlayerVisitEMPTY() {
+    @org.junit.Test
+    public void PlayerVisitEmpty() {
     
         p2.visit(em1);
-        assertEquals(null,this.data);
+        assertEquals(0,this.data.size());
         
     }
-     e1.visit(e2);
     @org.junit.Test
     public void PlayerVisitPlayer(){
         p1.visit(p2);
-        assertEquals(null,this.data);
-    }
+        assertEquals(0,this.data.size());    }
     @org.junit.Test
-    public void P1VisitE1(){
+    public void PlayerVisitEnemy(){
         p1.visit(e1);
         Assert.assertEquals("Mashawsha engaged in combat with Lannister Solider",this.data.get(0));
         String regexPlayer = "Mashawsha rolled [0-9]+ attack points";
@@ -90,7 +86,6 @@ public class PlayerTest {
     }
     @org.junit.After
     public void printer(){
-
         System.out.println(String.join(", ",this.data).replace(',','\n'));
         System.out.println(" ");
     }
